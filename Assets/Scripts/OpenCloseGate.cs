@@ -9,7 +9,7 @@ public class OpenCloseGate : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isVisible = !isVisible;
             gameObject.SetActive(isVisible);

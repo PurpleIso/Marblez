@@ -25,7 +25,7 @@ public class Camflight : MonoBehaviour
     private float cameraPitch = 0f;
 
     private Camera FreeCam;
-    private CamFlight inputActions; 
+    private CamFlight inputActions;
 
     private void Awake()
     {
@@ -107,10 +107,10 @@ public class Camflight : MonoBehaviour
         }
         else
         {
- 
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            LookInput = Vector2.zero; 
+            LookInput = Vector2.zero;
         }
 
         MoveCamera();
@@ -133,7 +133,7 @@ public class Camflight : MonoBehaviour
     void LookAround()
     {
         float mouseX = LookInput.x * lookSensitivity;
-        float mouseY = LookInput.y * lookSensitivity * (invertY ? 1f : -1f); 
+        float mouseY = LookInput.y * lookSensitivity * (invertY ? 1f : -1f);
 
 
         transform.Rotate(Vector3.up * mouseX);
