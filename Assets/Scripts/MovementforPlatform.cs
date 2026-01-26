@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class MovementforPlatform : MonoBehaviour
 {
-    public float rotationSpeed = 90.0f;
+    public float rotationSpeed = 40.0f;
 
+
+    //rotates the rotatable platforms with arrow keys
     void Update()
     {
 
