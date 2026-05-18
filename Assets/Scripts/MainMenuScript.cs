@@ -3,17 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    //changes scene to the game
-    public void StartGame()
-    { 
+    public void StartLevel1()
+    {
         SceneManager.LoadScene("SampleScene");
     }
 
-    //quits the game
+    public void StartLevel2()
+    {
+        SceneManager.LoadScene("LVL2");
+    }
+
     public void Quit()
     {
-        Debug.Log("pretend it closed game");
+        Debug.Log("quit game");
         Application.Quit();
     }
 }
-

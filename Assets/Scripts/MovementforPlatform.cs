@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class MovementforPlatform : MonoBehaviour
 {
-    public float rotationSpeed = 40.0f;
+    public float rotationSpeed = 90.0f;
 
 
-    //rotates the rotatable platforms with arrow keys
+
+
+
+    //uses the input.getkey to rotate platform. Ancient code but works for now
     void Update()
     {
 
@@ -27,16 +30,6 @@ public class MovementforPlatform : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Rotate(Vector3.right, -rotationSpeed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
     }
 }

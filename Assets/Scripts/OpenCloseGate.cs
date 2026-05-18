@@ -1,25 +1,20 @@
-using System.Collections;
 using UnityEngine;
 
 public class OpenCloseGate : MonoBehaviour
 {
     private bool isVisible = true;
-    private Renderer[] renderers;
-    private Collider[] colliders;
     void Start()
     {
-        renderers = GetComponentsInChildren<Renderer>();
-        colliders = GetComponentsInChildren<Collider>();
+        gameObject.SetActive(true);
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+
+        //if the f key is pressed toggles the visibility of the gate
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isVisible = !isVisible;
-            foreach (Renderer r in renderers)
-                r.enabled = isVisible;
-            foreach (Collider c in colliders)
-                c.enabled = isVisible;
+            gameObject.SetActive(isVisible);
         }
     }
 }
